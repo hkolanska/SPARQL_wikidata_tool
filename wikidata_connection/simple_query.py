@@ -3,18 +3,20 @@ from typing import List, Optional
 from wikidata_connection.query import Query
 from wikidata_connection.enums import select_possibilities,where_possibilities
 
-class SingleQuery(Query):
+class SimpleQuery(Query):
     select: List[str]
     where: List[str]
     order_by: Optional[str]
     limit: Optional[int]
 
-    def __init__(self, selected_values, order_by=None, limit=None):
+    def __init__(self, select_values,where_values, order_by=0, limit=None):
         super().__init__()
         self.select = ["?country", "?countryLabel"]
         self.where = [" ?country wdt:P31 wd:Q3624078 ."]
-        for number in selected_values:
+        for number in select_values:
             self.select.append(select_possibilities[number])
+            self.where.append((where_possibilities[number]))
+        for number in where_values:
             self.where.append((where_possibilities[number]))
         self.order_by = select_possibilities[order_by]
         self.limit = limit
