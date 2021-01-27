@@ -1,6 +1,4 @@
-from typing import List,Dict, Optional, Set
-import pywikibot
-from pywikibot import pagegenerators as pg
+from typing import List, Optional, Set
 from SPARQLWrapper import SPARQLWrapper, JSON
 import abc
 

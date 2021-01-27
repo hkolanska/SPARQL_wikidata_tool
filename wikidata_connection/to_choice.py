@@ -26,7 +26,7 @@ friendly_names = {
         2: 'Life Expectancy',
         3: 'GDB',
         4: 'Capital',
-        5: 'ONZ', #member of
+        5: 'UN', #member of
         6: 'EU',
         7: 'NATO',
         8: 'Europe', #continent

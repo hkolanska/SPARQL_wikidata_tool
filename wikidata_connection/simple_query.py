@@ -1,7 +1,7 @@
 from typing import List, Optional
 
 from wikidata_connection.query import Query
-from wikidata_connection.enums import select_possibilities,where_possibilities
+from wikidata_connection.to_choice import select_possibilities,where_possibilities
 
 class SimpleQuery(Query):
     select: List[str]
@@ -29,5 +29,5 @@ class SimpleQuery(Query):
         for element in self.where:
             self.query += f"{element}\n"
         self.query += "SERVICE wikibase:label { bd:serviceParam wikibase:language 'en' } \n } \n"
-        self.query += f"ORDER BY {self.order_by} \n" if self.order_by else ""
+        self.query += f"ORDER BY DESC({self.order_by}) \n" if self.order_by else ""
         self.query += f"LIMIT {self.limit} \n" if self.limit else ""
