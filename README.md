@@ -39,6 +39,7 @@ ORDER BY DESC(?population)
 LIMIT 5 
 ```
 It was created by choosing the following parameters:
+
 ![alt text](https://github.com/hkolanska/SPARQL_wikidata_tool/raw/main/ReadmeImages/complex_query.png "Complex query")
 
 ### GUI
