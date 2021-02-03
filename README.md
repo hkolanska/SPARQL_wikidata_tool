@@ -45,8 +45,7 @@ It was created by choosing the following parameters:
 ### GUI
 GUI was made using tkinter. The file consisting GUI code is in a directory [GUI](https://github.com/hkolanska/SPARQL_wikidata_tool/blob/main/GUI).
 
-##Example usage
-### Creating query
+## Example usage
 To start the application, run the file [app.py](https://github.com/hkolanska/SPARQL_wikidata_tool/blob/main/app.py).
  Then the create query view will be shown. There can be selected options extending basic query.
 
